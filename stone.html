@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone-Paper-Scissor</title>
+    <link rel="stylesheet" href="stone.css">
+</head>
+<body>
+   <h1>Rock Paper Scissors</h1>
+<!-- User -->
+   <div class="left">
+      <div class="choice" id="rock">
+          <img src="./rock.png" width="200" alt="image" >
+      </div>
+      <div class="choice" id="paper">
+          <img src="./paper.png" width="200" alt="image">
+      </div>
+      <div class="choice" id="scissor">
+          <img src="./scissors.png" width="200" alt="image" >
+      </div>
+   </div>
+<!-- Computer-->
+   <div class="right">
+      <img id="comp-img" src="" alt="c_choice">
+   </div>
+   
+<!-- Score-Board -->
+   <div class="score-board">
+      <div class="score">
+        <p id="user-score">0</p>
+        <p>YOU</p>
+      </div>
+      <div class="score">
+        <p id="compu-score">0</p>
+        <P>COMPUTER</P>
+      </div>
+   </div> 
+<!-- Message container -->
+   <div class="msg-container">
+       <p id="msg">Play Your Move</p>
+   </div>
+   <button id="exit-btn">End Game</button>
+   <button id="reset-btn">Restart Game</button>
+</body>
+<script src="stone.js"></script>
+</html>
