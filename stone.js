@@ -1,7 +1,7 @@
 let userScore=0;
 let compuScore=0;
 
-const right = document.querySelectorAll(".choice");
+const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
 const userScorepara = document.querySelector("#user-score");
 const compuScorepara = document.querySelector("#compu-score");
@@ -10,7 +10,7 @@ const exitBtn = document.querySelector("#exit-btn");
 const resetBtn = document.querySelector("#reset-btn");
 
 const genCompuChoice = () => {
-    const options = ["rock","paper","scissor"];
+    const options = ["rock","paper","scissors"];
     const randIdx= Math.floor(Math.random()*3);
     return options[randIdx];
 };
@@ -71,7 +71,7 @@ const playGame =(userchoice) =>{
             else if(userchoice == "paper")
               {
                 //rock,scissors
-                userwin = compuChoice == "scissor"?false : true;
+                userwin = compuChoice == "scissors"?false : true;
               }   
             else
               {
@@ -82,7 +82,7 @@ const playGame =(userchoice) =>{
         } 
 };
 
-right.forEach((choice)=>{
+choices.forEach((choice)=>{
     console.log(choice);
     choice.addEventListener("click",()=>{
         const userchoice = choice.getAttribute("id");
@@ -109,7 +109,7 @@ exitBtn.addEventListener("click", () => {
     }
 
     // ❌ Game disable (user click na kar sake)
-    right.forEach((choice)=>{
+    choices.forEach((choice)=>{
         choice.style.pointerEvents = "none";
     });
 });
@@ -131,7 +131,7 @@ resetBtn.addEventListener("click", () => {
     compImg.src = "";
 
     // ✅ Game dobara enable
-    right.forEach((choice)=>{
+    choices.forEach((choice)=>{
         choice.style.pointerEvents = "auto";
     });
 });
